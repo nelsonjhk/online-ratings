@@ -106,7 +106,7 @@ Then the following commands should start the app running and start tailing the l
 ```shell
 cp .env_example .env
 docker-compose build
-docker-compose up
+docker-compose up -d
 ```
 
 The `build` step will create docker containers for each part of the app (nginx,
