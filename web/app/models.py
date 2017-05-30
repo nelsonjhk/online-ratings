@@ -160,6 +160,7 @@ class Game(db.Model):
     rated = db.Column(db.Boolean, nullable=False, default=False) #has the game been rated.
     game_record = db.Column(db.LargeBinary)
     game_url = db.Column(db.String(100))
+    server_url = db.Column(db.String(100))
 
     handicap = db.Column(db.Integer, default=0, nullable=False)
     komi = db.Column(db.Float, default=7.5, nullable=False)

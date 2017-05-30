@@ -47,7 +47,8 @@ def validate_game_submission(headers, body_json):
     #optional
     data.update({
         'game_record': body_json.get('game_record'),
-        'game_url': body_json.get('game_url')
+        'game_url': body_json.get('game_url'),
+        'server_url': body_json.get('server_url')
     })
 
     server_token = headers.get('X-Auth-Server-Token')
