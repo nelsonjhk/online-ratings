@@ -26,9 +26,11 @@
     }
   });
     </script>
+    {% if game.server_url is not none %}
     <div class="panel-footer">
         <p> View game on <a href={{ game.server_url }}>{{ game.game_server }}</a></p>
     </div>
+    {% endif %}
   </div>
   
   {% else %}
