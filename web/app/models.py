@@ -159,8 +159,8 @@ class Game(db.Model):
     result = db.Column(db.String(10), nullable=False)
     rated = db.Column(db.Boolean, nullable=False, default=False) #has the game been rated.
     game_record = db.Column(db.LargeBinary)
-    game_url = db.Column(db.String(100))
-    server_url = db.Column(db.String(100))
+    game_url = db.Column(db.String(100)) #links to .sgf
+    server_url = db.Column(db.String(100)) #links to viewable game on original server
 
     handicap = db.Column(db.Integer, default=0, nullable=False)
     komi = db.Column(db.Float, default=7.5, nullable=False)
