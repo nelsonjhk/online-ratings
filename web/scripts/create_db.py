@@ -60,21 +60,21 @@ def create_test_data():
     db.session.add(Player(id=6, name="BazPlayerOGS", server_id=ogs_server.id, user_id=baz_user.id,token="secret_baz_OGS"))
 
 
-    db.session.add(Game(server_id=1, white_id=1, black_id=2, rated=True, result="B+0.5", game_record=sgf_data,
+    db.session.add(Game(server_id=1, white_id=1, black_id=2, rated=True, result="B+0.5", game_record=sgf_data, server_url="http://gokgs.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
-    db.session.add(Game(server_id=1, white_id=1, black_id=2, rated=True, result="W+39.5", game_record=sgf_data,
+    db.session.add(Game(server_id=1, white_id=1, black_id=2, rated=True, result="W+39.5", game_record=sgf_data, server_url="http://gokgs.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
-    db.session.add(Game(server_id=2, white_id=5, black_id=4, rated=True, result="W+Resign", game_record=sgf_data,
+    db.session.add(Game(server_id=2, white_id=5, black_id=4, rated=True, result="W+Resign", game_record=sgf_data, server_url="http://online-go.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
-    db.session.add(Game(server_id=2, white_id=5, black_id=4, rated=True, result="W+Resign", game_record=sgf_data,
+    db.session.add(Game(server_id=2, white_id=5, black_id=4, rated=True, result="W+Resign", game_record=sgf_data, server_url="http://online-go.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
-    db.session.add(Game(server_id=2, white_id=6, black_id=5, rated=True, result="W+Resign", game_record=sgf_data,
+    db.session.add(Game(server_id=2, white_id=6, black_id=5, rated=True, result="W+Resign", game_record=sgf_data, server_url="http://online-go.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
-    db.session.add(Game(server_id=1, white_id=1, black_id=2, rated=True, result="B+0.5", game_record=sgf_data,
+    db.session.add(Game(server_id=1, white_id=1, black_id=2, rated=True, result="B+0.5", game_record=sgf_data, server_url="http://gokgs.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
-    db.session.add(Game(server_id=1, white_id=3, black_id=2, rated=True, result="W+39.5", game_record=sgf_data,
+    db.session.add(Game(server_id=1, white_id=3, black_id=2, rated=True, result="W+39.5", game_record=sgf_data, server_url="http://gokgs.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
-    db.session.add(Game(server_id=2, white_id=5, black_id=6, rated=True, result="W+Resign", game_record=sgf_data,
+    db.session.add(Game(server_id=2, white_id=5, black_id=6, rated=True, result="W+Resign", game_record=sgf_data, server_url="http://online-go.com",
         date_played=datetime.datetime.now() - datetime.timedelta(seconds=random.randint(0,1000000))))
 
     db.session.commit()
